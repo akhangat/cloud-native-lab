@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cloudnativeaction
+  name: akhangat01
 spec:
   selector:
     matchLabels:
-      app: cloudnativeaction-pod
+      app: akhangat01
   template:
     metadata:
       labels:
-        app: cloudnativeaction-pod
+        app: akhangat01
     spec:
       containers:
-      - name: myapp
-        image: cloudnativeacr01.azurecr.io/cloudnativeaction:latest
+      - name: akhangat01
+        image: cloudnativeacr01.azurecr.io/akhangat:v1
         resources:
           limits:
             memory: "128Mi"
             cpu: "500m"
         ports:
-        - containerPort: 5000
+        - containerPort: 5001
